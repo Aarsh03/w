@@ -1,5 +1,16 @@
+name: Test Action
+
+on:
+  push:
+    branches:
+      - main  # or any branch you want to trigger the action
+
 jobs:
   test:
+    runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
       - name: 23f1001126@ds.study.iitm.ac.in
         run: echo "Hello, world!"
